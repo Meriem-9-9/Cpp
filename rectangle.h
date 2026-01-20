@@ -35,9 +35,6 @@ class RECTANGLE {
 
         int intersection(const RECTANGLE& r, RECTANGLE& result) const;
 
-
-
-
         void ordonner();
 };
 
