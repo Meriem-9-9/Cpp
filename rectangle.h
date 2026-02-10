@@ -12,7 +12,7 @@ class RECTANGLE {
         RECTANGLE(int x1 , int y1, int x2, int y2 );
         RECTANGLE(const POINT &p1, const POINT &p2);
 
-        int getX1() const { return X1; }
+        int getX1() const;
         int getY1() const { return Y1; }
         int getX2() const { return X2; }
         int getY2() const { return Y2; }
