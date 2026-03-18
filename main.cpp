@@ -1,16 +1,44 @@
 #include <iostream>
 
-// TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-int main() {
-    // TIP Press <shortcut actionId="RenameElement"/> when your caret is at the <b>lang</b> variable name to see how CLion can help you rename it.
-    auto lang = "C++";
-    std::cout << "Hello and welcome to " << lang << "!\n";
+#include "POINT.h"
+#include "rectangle.h"
 
-    for (int i = 1; i <= 5; i++) {
-        // TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        std::cout << "i = " << i << std::endl;
+int main() {
+    int n;
+    std::cout << "Donner le nombre de rectangles: ";
+    std::cin >> n;
+
+    if (n <= 0) {
+        std::cout << "Nombre invalide.\n";
+        return 0;
     }
 
+    RECTANGLE* tab = new RECTANGLE[n];
+
+    for (int i = 0; i < n; i++) {
+        std::cout << "\n--- Rectangle " << (i + 1) << " ---\n";
+        tab[i].saisir();
+    }
+
+    RECTANGLE inter = tab[0];
+    RECTANGLE tmp;
+
+    int ok = 1;
+    for (int i = 1; i < n; i++) {
+        ok = inter.intersection(tab[i], tmp);
+        if (!ok) break;
+        inter = tmp;
+    }
+
+    std::cout << "\n==== RESULTAT ====\n";
+    if (!ok) {
+        std::cout << "Intersection vide.\n";
+        tmp.afficher();
+    } else {
+        std::cout << "Intersection de tous les rectangles:\n";
+        inter.afficher();
+    }
+
+    delete[] tab;
     return 0;
-    // TIP See CLion help at <a href="https://www.jetbrains.com/help/clion/">jetbrains.com/help/clion/</a>. Also, you can try interactive lessons for CLion by selecting 'Help | Learn IDE Features' from the main menu.
 }

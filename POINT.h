@@ -15,4 +15,4 @@ private:
 
 };
 
-#endif POINT_H
+#endif //POINT_H

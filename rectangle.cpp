@@ -38,8 +38,8 @@ void RECTANGLE::ordonner() {
 }
 
 void RECTANGLE::afficher() const {
-    std::cout << "Coin en haut à gauche : (" << X1 << "," << Y1 << ")\n";
-    std::cout << "Coin en bas à droite : (" << X2 << "," << Y2 << ")\n";
+    std::cout << "Coin en haut a gauche : (" << X1 << "," << Y1 << ")\n";
+    std::cout << "Coin en bas a droite : (" << X2 << "," << Y2 << ")\n";
 }
 
 void RECTANGLE::saisir() {
@@ -119,10 +119,10 @@ int RECTANGLE::position(const RECTANGLE& r) const {
     if (X1 < r.X1 && Y1 < r.Y1 && X2 > r.X2 && Y2 > r.Y2) return 1;
     if (r.X1 < X1 && r.Y1 < Y1 && r.X2 > X2 && r.Y2 > Y2) return 2;
 
-    bool intersect = !(X2 < r.X1 || X1 > r.X2 || Y2 < r.Y1 || Y1 > r.Y2);
-
-    if (!intersect) return -1;
+    bool vide = (X2 < r.X1) || (X1 > r.X2) || (Y2 < r.Y1) || (Y1 > r.Y2);
+    if (vide) return -1;
     return 0;
+
 }
 
 RECTANGLE RECTANGLE::unionRect(const RECTANGLE& r) const {
