@@ -33,7 +33,7 @@ int main() {
     std::cout << "\n==== RESULTAT ====\n";
     if (!ok) {
         std::cout << "Intersection vide.\n";
-        tmp.afficher();
+        //tmp.afficher();
     } else {
         std::cout << "Intersection de tous les rectangles:\n";
         inter.afficher();
