@@ -10,7 +10,14 @@ add_executable(Partie1_2
         #TP1/rectangle2.cpp
         #TP1/rectangle2.h
         #TP1/rectangle.h
-        Ex/ex3/Polynome.h
-        Ex/ex3/Polynome.cpp
-        Ex/ex3/main.cpp
-        )
+
+        #Ex/ex3/Polynome.h
+        #Ex/ex3/Polynome.cpp
+        #Ex/ex3/main.cpp
+
+        Ex/ex2/Point.h
+        Ex/ex2/Point.cpp
+        Ex/ex2/rectangle.h
+        Ex/ex2/rectangle.cpp
+        Ex/ex2/main.cpp
+)
