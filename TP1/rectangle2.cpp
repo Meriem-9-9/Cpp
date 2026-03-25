@@ -114,6 +114,9 @@ int RECTANGLE::position(const RECTANGLE& r) const {
     return 0;
 }
 
+
+/*
+
 RECTANGLE RECTANGLE::unionRect(const RECTANGLE& r) const {
     int x1 = (P1.abscisse() < r.getX1()) ? P1.abscisse() : r.getX1();
     int y1 = (P1.ordonnee() < r.getY1()) ? P1.ordonnee() : r.getY1();
@@ -145,7 +148,7 @@ int RECTANGLE::intersection(const RECTANGLE& r, RECTANGLE& result) const {
     }
     result = RECTANGLE(POINT(x1, y1), POINT(x2, y2));
     return 1;
-}
+}*/
 /*
 "Dans l'exercice 17, le changement de représentation interne de 4 entiers vers 2 objets POINT"
 " impacte uniquement les fonctions liées à la construction et à l'entrée/sortie du rectangle"

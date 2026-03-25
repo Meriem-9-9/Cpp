@@ -1,7 +1,7 @@
 #include <iostream>
 
-#include "POINT.h"
-#include "rectangle.h"
+#include "TP1/POINT.h"
+#include "TP1/rectangle.h"
 
 int main() {
     int n;
